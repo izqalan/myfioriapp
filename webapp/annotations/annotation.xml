@@ -15,6 +15,25 @@
                         <PropertyPath>Name</PropertyPath>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TechnicalData"/>
+                            <PropertyValue Property="Label" String="Technical Data"/>
+                            <PropertyValue Property="ID" String="TechData"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.Chart"/>
+                            <PropertyValue Property="Label" String="Monthly Revenue"/>
+                            <PropertyValue Property="ID" String="MonthRev"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.LineItem"/>
+                            <PropertyValue Property="Label" String="Sales Data"/>
+                            <PropertyValue Property="ID" String="SalesData"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
                 <Annotation Term="UI.FieldGroup" Qualifier="TechnicalData">
                     <Record>
                         <PropertyValue Property="Data">
@@ -40,11 +59,7 @@
                                     <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="Weight" />
-                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="DimensionUnit"/>
+                                    <PropertyValue Property="Value" Path="DimensionUnit" />
                                 </Record>
                             </Collection>
                         </PropertyValue>
