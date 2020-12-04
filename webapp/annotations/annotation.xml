@@ -18,19 +18,19 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TechnicalData"/>
-                            <PropertyValue Property="Label" String="Technical Data"/>
-                            <PropertyValue Property="ID" String="TechData"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TechnicalData" />
+                            <PropertyValue Property="Label" String="Technical Data" />
+                            <PropertyValue Property="ID" String="TechData" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.Chart"/>
-                            <PropertyValue Property="Label" String="Monthly Revenue"/>
-                            <PropertyValue Property="ID" String="MonthRev"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.Chart" />
+                            <PropertyValue Property="Label" String="Monthly Revenue" />
+                            <PropertyValue Property="ID" String="MonthRev" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.LineItem"/>
-                            <PropertyValue Property="Label" String="Sales Data"/>
-                            <PropertyValue Property="ID" String="SalesData"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_ProductSalesData/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="Sales Data" />
+                            <PropertyValue Property="ID" String="SalesData" />
                         </Record>
                     </Collection>
                 </Annotation>
@@ -65,6 +65,55 @@
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Technical Data" />
                     </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.SEPMRA_C_PD_ProductSalesDataType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ID" />
+                            <PropertyValue Property="Label" String="Sales ID" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="DeliveryMonth_Text" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Sales Order" />
+                        <PropertyValue Property="TypeNamePlural" String="Sales Orders" />
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="ID" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup">
+                    <Record Type="UI.FieldGroupType">
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DeliveryDateTime" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DeliveryMonth" />
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="DeliveryMonth_Text" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup" />
+                            <PropertyValue Property="Label" String="Sales Information" />
+                        </Record>
+                    </Collection>
                 </Annotation>
             </Annotations>
         </Schema>
